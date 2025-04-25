@@ -6,7 +6,7 @@ from typing import List
 app = FastAPI()
 
 # Root endpoint to check if the service is live
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 async def read_root():
     return {"message": "CatfishExposed API is live"}
 
